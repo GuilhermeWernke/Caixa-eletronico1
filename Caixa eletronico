@@ -28,17 +28,15 @@ programa
 
 
 	funcao processa_saque(inteiro valor_saque)
-	{
-		inteiro resto
-		
+	{		
 		notas_50 = valor_saque / 50 // siga esta ideia para programar as duas linhas abaixo
-		resto = notas_50 % 50
+		valor_saque = valor_saque - notas_50 * 50
 
-		notas_20 = resto / 20
-		resto = notas_20 % 20
+		notas_20 = valor_saque / 20
+		valor_saque = valor_saque - notas_20 * 20
 
-		notas_10 = resto / 10
-		resto = notas_10 % 10
+		notas_10 = valor_saque / 10
+		valor_saque = valor_saque - notas_10 * 20
 	}
 
 
@@ -80,9 +78,9 @@ programa
 				//escreva("Saque de ", valor_clicado, "\n")
 				processa_saque(valor_clicado)
 
-					
-				}
+				
 			}
+		}
 		enquanto( verdadeiro )
 	}
 
